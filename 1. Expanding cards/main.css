@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  height: 400px;
+  max-width: 100px;
+  transition: 300ms ease-in-out;
+}
+
+.card__title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  visibility: hidden;
+  color: white;
+}
+
+.card__image {
+  border-radius: 20px;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.card#active {
+  max-width: 500px;
+}
+
+.card#active .card__title {
+  visibility: visible;
+  transition: visibility 300ms 300ms;
+}
